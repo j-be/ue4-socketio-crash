@@ -9,11 +9,11 @@ socketio = SocketIO(app)
 
 
 @socketio.on('testEvent')
-def test_event():
+def test_event(_=None):
     print "Got test event"
 
 @socketio.on('testEventWithException')
-def test_event_with_exception():
+def test_event_with_exception(_=None):
     print "Got test event, throwing exception NOW"
     raise Exception()
 
